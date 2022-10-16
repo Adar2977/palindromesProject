@@ -3,13 +3,23 @@ pali = input("please enter a palindrome ")
 
 pali = str.casefold(pali)
     #making the input lowercase
+def revFunction(pali):
 
-pali1 = reversed(pali)
-    #making the user input reversed
+        return pali[::-1]
+    #function that makes the user input reversed
+    #The return statement makes the string move in reverse. And returns the input backwards
 
-if list(pali1) == list(pali):
-    print("True")
-else:
-    print("False")
-    #if else statement to check if the user input is a palindrome
+def palindrome(pali):
+        if revFunction(pali) == pali:
+                print("True")
+        else:
+                print("False")
+
+        return palindrome
+#function that checks if the input is a palindrome
+
+print(palindrome(pali))
+#printing out the palindrome function
+
+
 
